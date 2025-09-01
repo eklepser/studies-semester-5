@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тишков / Федотов Бригада №5 - Анкета для опроса</title>
+</head>
+<body>
+    <h1>Тишков / Федотов Бригада №5</h1>
+    <hr>
+
+    <h2>Анкета для опроса</h2>
+    
+    <form action="http://192.168.32.150/study/lab7/index.php" method="post" name="surveyForm">
+        <table cellpadding="8">
+            <tr>
+                <td colspan="2"><h3>1. Личная информация</h3></td>
+            </tr>
+            <tr>
+                <td width="200"><label for="fio">ФИО:</label></td>
+                <td>
+                    <input type="text" id="fio" name="fio" 
+                           size="25" maxlength="25" 
+                           value="" 
+                           placeholder="Введите ваше ФИО" required>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="age">Возраст:</label></td>
+                <td>
+                    <input type="number" id="age" name="age" 
+                           min="18" max="100" value=""
+                           placeholder="Введите ваш возраст" required>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="email">E-mail:</label></td>
+                <td>
+                    <input type="email" id="email" name="email" 
+                           size="25" maxlength="25" 
+                           value="" 
+                           placeholder="example@mail.com" required>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Пол:</td>
+                <td>
+                    <label>
+                        <input type="radio" name="gender" value="male" > Мужской
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female"> Женский
+                    </label>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2"><h3>2. Образование</h3></td>
+            </tr>
+            <tr>
+                <td><label for="education">Уровень образования:</label></td>
+                <td>
+                    <select id="education" name="education">
+                        <option value="school">Среднее образование</option>
+                        <option value="college" >Среднее специальное</option>
+                        <option value="bachelor">Бакалавр</option>
+                        <option value="master">Магистр</option>
+                        <option value="phd">Кандидат наук</option>
+                        <option value="doctor">Доктор наук</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2"><h3>3. Опыт работы</h3></td>
+            </tr>
+            <tr>
+                <td><label for="experience">Стаж работы (лет):</label></td>
+                <td>
+                    <input type="range" id="experience" name="experience" 
+                           min="0" max="10" value=""
+                           oninput="expValue.value = experience.value">
+                    <output id="expValue">5</output> лет
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Сфера деятельности:</td>
+                <td>
+                    <label>
+                        <input type="checkbox" name="sphere[]" value="it"> IT-технологии
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="sphere[]" value="education" > Образование
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="sphere[]" value="medicine"> Медицина
+                    </label><br>
+                    <label>
+                        <input type="checkbox" name="sphere[]" value="engineering"> Инженерия
+                    </label>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2"><h3>4. Удовлетворенность работой</h3></td>
+            </tr>
+            <tr>
+                <td>Удовлетворены ли вы своей работой?</td>
+                <td>
+                    <label>
+                        <input type="radio" name="satisfaction" value="very_satisfied"> Очень доволен
+                    </label><br>
+                    <label>
+                        <input type="radio" name="satisfaction" value="satisfied" > Доволен
+                    </label><br>
+                    <label>
+                        <input type="radio" name="satisfaction" value="neutral"> Нейтрально
+                    </label><br>
+                    <label>
+                        <input type="radio" name="satisfaction" value="dissatisfied"> Не доволен
+                    </label>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2"><h3>5. Ваши предложения</h3></td>
+            </tr>
+            <tr>
+                <td><label for="suggestions">Предложения по улучшению:</label></td>
+                <td>
+                    <textarea id="suggestions" name="suggestions" 
+                              cols="40" rows="3" 
+                              wrap="physical"
+                              placeholder="Введите ваши предложения..."></textarea>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="resume">Резюме (если есть):</label></td>
+                <td>
+                    <input type="file" id="resume" name="resume" 
+                           accept=".pdf,.doc,.docx">
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2" align="center" style="padding-top: 20px;">
+                    <input type="submit" value="Отправить анкету">
+                    <input type="reset" value="Очистить форму">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>

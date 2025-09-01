@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тишков / Федотов Бригада №5</title>
+</head>
+<body>
+    <h1>Тишков / Федотов Бригада №5</h1>
+    <hr>
+
+    <h2>Форма регистрации</h2>
+    
+    <form action="http://192.168.32.150/study/lab7/index.php" method="post" name="registrationForm">
+        <table cellpadding="8">
+            <tr>
+                <td><label for="fio">ФИО:</label></td>
+                <td>
+                    <input type="text" id="fio" name="fio" 
+                           size="25" maxlength="25" 
+                           value="" 
+                           placeholder="Введите ваше ФИО" required>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="mail">E-mail:</label></td>
+                <td>
+                    <input type="email" id="mail" name="mail" 
+                           size="25" maxlength="25" 
+                           value="" 
+                           placeholder="example@mail.com" required>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="pass">Пароль:</label></td>
+                <td>
+                    <input type="password" id="pass" name="pass" 
+                           size="25" maxlength="25" 
+                           placeholder="Введите пароль" required>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Пол:</td>
+                <td>
+                    <label>
+                        <input type="radio" name="sex" value="male" > Мужской
+                    </label>
+                    <label>
+                        <input type="radio" name="sex" value="female"> Женский
+                    </label>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="team">№ бригады:</label></td>
+                <td>
+                    <select id="team" name="team">
+                        <option value="1">Бригада № 1</option>
+                        <option value="2">Бригада № 2</option>
+                        <option value="3">Бригада № 3</option>
+                        <option value="4">Бригада № 4</option>
+                        <option value="5" >Бригада № 5</option>
+                        <option value="6">Бригада № 6</option>
+                        <option value="7">Бригада № 7</option>
+                        <option value="8">Бригада № 8</option>
+                        <option value="9">Бригада № 9</option>
+                        <option value="10">Бригада № 10</option>
+						<option value="11">Бригада № 11</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Наиболее<br>интересные<br>работы:</td>
+                <td>
+                    <fieldset>
+                        <legend>Выберите интересные работы:</legend>
+                        <label>
+                            <input type="checkbox" name="lab1" value="1"> ЛР № 1. Теги
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="lab2" value="1"> ЛР № 2. Списки
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="lab3" value="1"> ЛР № 3. Ссылки
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="lab4" value="1" > ЛР № 4. Графика
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="lab5" value="1"> ЛР № 5. Таблицы
+                        </label><br>
+                        <label>
+                            <input type="checkbox" name="lab6" value="1" > ЛР № 6. Формы
+                        </label>
+                    </fieldset>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><label for="offer">Предложения:</label></td>
+                <td>
+                    <textarea id="offer" name="offer" 
+                              cols="40" rows="3" 
+                              wrap="physical"
+                              placeholder="Введите ваши предложения...">Пупупу. Мяумяумяу.</textarea>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Отправить">
+                    <input type="reset" value="Очистить">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
